@@ -1,6 +1,7 @@
 package com.eason.demo;
 
 import com.eason.demo.bo.FruitSaleBo;
+import com.eason.demo.common.Constants;
 import com.eason.demo.entity.DiscountRule;
 import com.eason.demo.entity.Fruit;
 import com.eason.demo.stragtegy.context.FruitSaleContext;
@@ -26,7 +27,7 @@ class DemoApplicationTests {
      */
     @Test
     public void countTotalPriceByNormal1() {
-        fruitSaleContext.setFruitSaleStrategy("normal");
+        fruitSaleContext.setFruitSaleStrategy(Constants.SaleStrategyType.NORMAL);
         FruitSaleBo bo = new FruitSaleBo();
         List<Fruit> fruitList = new ArrayList<>();
         fruitList.add(new Fruit("苹果", 8, 5));
@@ -40,7 +41,7 @@ class DemoApplicationTests {
      */
     @Test
     public void countTotalPriceByNormal2() {
-        fruitSaleContext.setFruitSaleStrategy("normal");
+        fruitSaleContext.setFruitSaleStrategy(Constants.SaleStrategyType.NORMAL);
         FruitSaleBo bo = new FruitSaleBo();
         List<Fruit> fruitList = new ArrayList<>();
         fruitList.add(new Fruit("苹果", 8,5));
@@ -55,7 +56,7 @@ class DemoApplicationTests {
      */
     @Test
     public void countTotalPriceByDiscount() {
-        fruitSaleContext.setFruitSaleStrategy("discount");
+        fruitSaleContext.setFruitSaleStrategy(Constants.SaleStrategyType.DISCOUNT);
         FruitSaleBo bo = new FruitSaleBo();
         List<Fruit> fruitList = new ArrayList<>();
         fruitList.add(new Fruit("苹果", 8, 5));
@@ -70,7 +71,7 @@ class DemoApplicationTests {
      */
     @Test
     public void countTotalPriceByOverOff() {
-        fruitSaleContext.setFruitSaleStrategy("overOff");
+        fruitSaleContext.setFruitSaleStrategy(Constants.SaleStrategyType.OVEROFF);
         FruitSaleBo bo = new FruitSaleBo();
         List<Fruit> fruitList = new ArrayList<>();
         fruitList.add(new Fruit("苹果", 8, 5));

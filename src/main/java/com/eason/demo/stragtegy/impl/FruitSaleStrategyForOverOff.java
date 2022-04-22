@@ -1,5 +1,6 @@
 package com.eason.demo.stragtegy.impl;
 
+import com.eason.demo.common.Constants;
 import com.eason.demo.entity.DiscountRule;
 import com.eason.demo.entity.Fruit;
 import com.eason.demo.stragtegy.FruitSaleStrategy;
@@ -15,7 +16,7 @@ import java.util.List;
  * 满级优惠策略
  * Created by eason on 2022/4/22.
  */
-@Service("overOff")
+@Service(Constants.SaleStrategyType.OVEROFF)
 @Slf4j
 public class FruitSaleStrategyForOverOff implements FruitSaleStrategy {
 

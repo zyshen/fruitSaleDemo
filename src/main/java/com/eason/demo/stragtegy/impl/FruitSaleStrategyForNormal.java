@@ -1,6 +1,7 @@
 package com.eason.demo.stragtegy.impl;
 
 import com.eason.demo.bo.FruitSaleBo;
+import com.eason.demo.common.Constants;
 import com.eason.demo.entity.Fruit;
 import com.eason.demo.stragtegy.FruitSaleStrategy;
 import com.eason.demo.utils.ArithUtil;
@@ -13,7 +14,7 @@ import java.util.List;
  * 平常策略
  * Created by eason on 2022/4/22.
  */
-@Service("normal")
+@Service(Constants.SaleStrategyType.NORMAL)
 @Slf4j
 public class FruitSaleStrategyForNormal implements FruitSaleStrategy {
     @Override
